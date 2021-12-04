@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #BAE0E3;
+    font-family: "Space Mono";
+}
+
+h1{
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 8px;
+    color: #00535A;
+    font-weight: 700;
+}
+
+h1:nth-of-type(1){
+    margin-top: 100px;
+}
+
+h1:nth-of-type(2){
+    margin-bottom: 50px;
+}
+
+.calculator{
+    margin: 0 auto;
+    background: white;
+    max-width: 850px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    gap: 40px;
+    padding: 40px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.inputContainer{
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: hsl(189, 41%, 97%);
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.inputContainer:nth-of-type(1){
+    margin-bottom: 30px;
+}
+input{
+    background: none;
+    border: none;
+    border-radius: 8px;
+    text-align: right;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 5px 0;
+    width: 100%;
+    font-family: "Space Mono";
+    color: hsl(183, 100%, 15%);
+    padding-right: 20px;
+    outline: none;
+    transition: 0.2s;
+}
+
+
+input:focus{
+    border: 2px solid hsl(172, 67%, 45%);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    
+}
+input:hover{
+    cursor: pointer;
+}
+
+i{
+    color: hsl(184, 14%, 56%);
+    font-size: 18px;
+    padding: 10px;
+    position: absolute;
+}
+
+.containerOne{
+    width: 50%;
+    color:hsl(183, 100%, 15%);
+    font-weight: 700;
+}
+
+.tips{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+
+.box{
+    background:hsl(183, 100%, 15%);
+    border-radius: 5px;
+    width: 110px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: hsl(189, 41%, 97%);
+    transition: 0.2s;
+}
+
+.box:hover{
+    background: hsl(172, 67%, 45%);
+    cursor: pointer;
+}
+
+ #input{
+    color:hsl(183, 100%, 15%);
+    background: hsl(189, 41%, 97%);
+    margin-right: 0;
+    padding-right: 0;
+}
+
+#input:hover{
+    background: hsl(189, 41%, 97%);
+    cursor: pointer;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::placeholder{
+    color:hsl(183, 100%, 15%);
+}
+.containerTwo{
+    width: 50%;
+    padding: 0 30px;
+    padding-bottom: 30px;
+    padding-top: 40px;
+    background: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    color: hsl(189, 41%, 97%);
+}
+
+span:nth-child(2){
+    color:hsl(184, 14%, 56%);
+    font-size: 14px;
+}
+
+.values{
+    width: 100%;
+}
+.valueOne, .valueTwo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+ h2{
+     font-size: 36px;
+     color:hsl(172, 67%, 45%);
+ }
+
+button{
+    width: 100%;
+    padding: 8px;
+    background:#005C61;
+    color: hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 4px;
+    font-family: "Space Mono";
+    font-size: 18px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.box:hover{
+    background: hsl(172, 67%, 45%);
+    cursor: pointer;
+}
+
+.active{
+    background:hsl(172, 67%, 45%);
+}
+
+.activeBtn{
+    background:hsl(172, 67%, 45%);
+}
+
+.reset:hover{
+    cursor: pointer;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.zero{
+    display: none;
+    color: red;
+    text-align: right;
+}
+
+@media (min-width: 600px) and (max-width: 850px){
+    .tips{
+        justify-content: space-evenly;
+    }
+}
+
+@media (min-width: 390px) and (max-width: 586px){
+
+    .calculator{
+        flex-wrap: wrap;
+        width: 80%;
+    }
+    .containerOne, .containerTwo{
+        width: 100%;
+    }
+
+    .tips{
+        justify-content: space-evenly;
+    }
+
+    .reset{
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 390px){
+    .calculator{
+        flex-wrap: wrap;
+        width: 90%;
+    }
+    .containerOne, .containerTwo{
+        width: 100%;
+    }
+
+    .tips{
+        justify-content: space-evenly;
+    }
+
+    .reset{
+        margin-top: 15px;
+    }
+    .box{
+        width: 90px;
+    }
+    }

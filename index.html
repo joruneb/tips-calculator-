@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  
+</head>
+<body ontouchstart="">
+  <h1>SPLI</h1>
+  <h1>TTER</h1>
+
+  <div class="calculator">
+    <div class="containerOne">
+      <p>Bill</p>
+      <div class="inputContainer">
+        <i class="fa fa-dollar"></i>
+        <input class="bill" type="number" min="0" placeholder="0">
+      </div>
+      <p>Select Tip %</p>
+      <div class="tips">
+        <button class="box" value=5>5%</button>
+        <button class="box" value="10">10%</button>
+        <button class="box" value="15">15%</button>
+        <button class="box" value="25">25%</button>
+        <button class="box" value="50">50%</button>
+        <input class="box" id="input" type="number" min="0" placeholder="Custom">
+      </div>
+      <div class="wrapper">
+        <p>Number of People</p>
+        <p class="zero">Can't be zero</p>
+      </div>
+      <div class="inputContainer">
+        <i class="fa fa-user icon"></i>
+        <input class="people" type="number" oninput="this.value=(parseInt(this.value)||0)" min="0" placeholder="0">
+      </div>
+    </div>
+    <div class="containerTwo">
+      <div class="values">
+        <div class="valueOne">
+          <p>Tip Amount
+            <br>
+            <span>/person</span>
+          </p>
+          <h2 class="tipAmount"><span>$</span>0.00</h2>
+        </div>
+        <div class="valueTwo">
+          <p>Total
+          <br>
+          <span>/person</span>
+          </p>
+          <h2 class="total"><span>$</span>0.00</h2>
+        </div>
+      </div>
+        <button class="reset" disabled>RESET</button>
+    </div>
+  </div>  
+  
+<script src="script.js"></script>
+</body>
+</html>
